@@ -1,4 +1,4 @@
-# Hera 5.1 on Dell XPS 7390, Non-Touch (late 2019)
+# elementary OS Hera 5.1 on Dell XPS 7390, Non-Touch (13", late 2019)
 
 ![elementary OS: 5.1 Hera](https://img.shields.io/badge/elementary%C2%A0OS-5.1%20Hera-007aff)
 ![Status: Verified](https://img.shields.io/badge/status-verified-58c633)
