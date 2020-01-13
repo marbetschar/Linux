@@ -2,8 +2,13 @@
 
 ![Status: Verified](https://img.shields.io/badge/status-verified-green.svg)
 ![macOS: Catalina](https://img.shields.io/badge/macOS-Catalina-blue.svg)
+![elementary OS: 5.1 Hera](https://img.shields.io/badge/elementary%C2%A0OS-5.1%20Hera-007aff)
+![VMWare Workstation Player: 15.5.1](https://img.shields.io/badge/VMWare%C2%A0Workstation%C2%A0Player-15.5.1-007aff)
+![unlocker: 3.0.3](https://img.shields.io/badge/unlocker-3.0.3-007aff)
 
 How to setup macOS Catalina in VMWare Player.
+
+**PLEASE NOTE:** At the time of writing, the only way to make VMWare Player behave correctly was to start it with root permissions. Otherwise it freezed during startup - showing only a `Waiting for connection...` message.
 
 ## Prerequisites
 
@@ -55,27 +60,25 @@ In order to be able to successfully launch macOS in VMWare Player, we need to un
 1. Make sure VMWare Workstation Player is closed
 2. Download the [latest ZIP Release from GitHub](https://github.com/paolo-projects/unlocker/releases)
 3. Unpack the ZIP file
-4. Execute `lnx-install.sh` with: `chmod +x lnx-install.sh && sudo ./lnx-install.sh`
-5. If the Installation was sucessfull, you are now able to create new virtual machines with macOS as Guest OS.
+4. Edit the `lnx-install.sh` file and make sure, `gettools.py` is called with `python3` (at the bottom of the file): `python3 gettools.py`
+5. Execute `lnx-install.sh` with: `chmod +x lnx-install.sh && sudo ./lnx-install.sh`
+6. If the Installation was sucessfull, you are now able to create new virtual machines with macOS as Guest OS.
 
 ## Create macOS virtual machine
 
 1. Start the VMWare Workstation Player and select "New Virtual Machine"
 2. Select "I will install the operating system later"
 3. Select Apple Mac OS X with version "macOS 10.15"
-4. Create a virtual disk with **80 GB** capacity and **make sure you enable "Store virtual disk as single file"**
+4. Create a virtual disk with **120 GB** capacity and **make sure you enable "Store virtual disk as single file"**
 5. Fine tune the virtual machine after creation by click "Edit Virtual Machine":
     - Assign at least 2 CPUs
     - Assign at least 4 GB of RAM
     - **Add a "USB 2.0" controller if you plan to connect an iOS hardware device**
-6. **Workaround for Known Issue**
-    - After you're done fine tuning your virtual machine, make sure you close VMWare Workstation Player
-    - Open the virtual machine configuration file in your favorite text editor and add `smc.version = "0"` to the end of it
-    - *For more information see [3. Limitations](https://github.com/DrDonk/unlocker) in the DrDonk/unlocker README file.*
+6. **Make sure you close VMWare Workstation Player**
 
 ## Install macOS Catalina
 
-1. Start the VMWare Workstation Player
+1. Start the VMWare Workstation Player **as root:** `sudo vmplayer`
 2. Make sure you inserted the macOS Catalina iso image file in the CD/DVD device of the virtual machine (Edit virtual machine settings)
 3. Start the virtual machine
 4. Once the install media booted, select your language
