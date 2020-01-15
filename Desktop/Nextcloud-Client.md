@@ -37,7 +37,7 @@ And that's it. You successfully installed Nextcloud client on elementary OS. Sta
 
 ## Nextcloud integration does not appear in Files
 
-Until this Pull Request is merged and a new Nextcloud client release is ready, you need to create the following two files manually. Before you do so, make sure the needed paths exist, by executing the following command:
+Until [this Pull Request is merged](https://github.com/nextcloud/desktop/pull/1729) and a new Nextcloud client release is ready, you need to create the following two files manually. Before you do so, make sure the needed paths exist, by executing the following command:
 
 ```
 sudo mkdir -p /usr/share/cloud-providers
