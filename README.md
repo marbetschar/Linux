@@ -9,4 +9,5 @@
 ## Desktop
 
 - [Encrypt Home Folder](Desktop/Encrypt-Home-Folder.md)
+- [Nextcloud Client](Nextcloud-Client.md)
 - [macOS Catalina in VMWare Workstation Player](Desktop/VMWare-macOS-Catalina.md)

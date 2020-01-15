@@ -1,6 +1,6 @@
 # macOS Catalina in VMWare Workstation Player
 
-![Status: Verified](https://img.shields.io/badge/status-verified-green.svg)
+![Status: WIP](https://img.shields.io/badge/status-wip-ff3130)
 ![macOS: Catalina](https://img.shields.io/badge/macOS-Catalina-blue.svg)
 ![elementary OS: 5.1 Hera](https://img.shields.io/badge/elementary%C2%A0OS-5.1%20Hera-007aff)
 ![VMWare Workstation Player: 15.5.1](https://img.shields.io/badge/VMWare%C2%A0Workstation%C2%A0Player-15.5.1-007aff)
@@ -9,6 +9,8 @@
 How to setup macOS Catalina in VMWare Player.
 
 **PLEASE NOTE:** At the time of writing, the only way to make VMWare Player behave correctly was to start it with root permissions. Otherwise it freezed during startup - showing only a `Waiting for connection...` message.
+
+**IMPORTANT:** The instructions below do not work. For some reason macOS Catalina hangs at boot after initial installation.
 
 ## Prerequisites
 
