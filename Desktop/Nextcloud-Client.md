@@ -5,7 +5,7 @@
 
 These steps document how to install the Nextcloud client on elementary OS 5.1 Hera - including Cloud Providers support in Files:
 
-![Nextcloud Cloud Provider integration in Files](_docs/Files-Cloud-Provider-Nextcloud.png)
+![Nextcloud Cloud Provider integration in Files](../_docs/Files-Cloud-Provider-Nextcloud.png)
 
 **PLEASE NOTE:** At the time of writing (2020-01-15) Cloud Providers integration did not work out of the box due to [a Pull Request not merged yet](https://github.com/nextcloud/desktop/pull/1729). To fix this, see the [Troubleshooting section below](#troubleshooting)
 
