@@ -1,4 +1,4 @@
-# Nextcloud Client
+# Nextcloud Client on elementary OS
 
 ![elementary OS: 5.1 Hera](https://img.shields.io/badge/elementary%C2%A0OS-5.1%20Hera-007aff)
 ![Status: Verified](https://img.shields.io/badge/status-verified-58c633)
@@ -15,6 +15,7 @@ You need to add the Nextcloud client PPA to enable your elementary OS to actuall
 For this, open a Terminal and insert the following commands:
 
 ```
+sudo apt install software-properties-common    # installs the "add-apt-repository" command
 sudo add-apt-repository ppa:nextcloud-devs/client
 sudo apt-get update
 ```
