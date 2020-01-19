@@ -9,9 +9,7 @@ These steps document how to install elementary OS Daily - which includes the lat
 
 - Latest elementary OS installed
 
-## Installation
-
-### 1. Add elementary OS Daily PPA
+## Install elementary OS Daily PPA
 
 You need to add the elementary OS Daily PPA to enable your elementary OS to find the latest available packages.
 For this, open a Terminal and insert the following commands:
@@ -26,3 +24,11 @@ sudo apt upgrade
 Et voilà, your on elementary OS Daily now!
 
 For more details see [the PPA's homepage](https://launchpad.net/~elementary-os/+archive/ubuntu/daily).
+
+## Optional: Install elementary OS SDK
+
+If you plan to develop for elementary OS, then you also need to install the elementary OS SDK:
+
+```
+sudo apt install elementary-sdk
+```
