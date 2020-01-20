@@ -7,4 +7,5 @@
 ## Desktop
 
 - [Encrypt Home Folder](Desktop/Encrypt-Home-Folder.md)
+- [ONLYOFFICE Desktop Editors](ONLYOFFICE-Desktop-Editors.md)
 - [macOS Catalina in VMWare Workstation Player](Desktop/VMWare-macOS-Catalina.md)
