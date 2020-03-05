@@ -1,6 +1,7 @@
 ## elementary OS
 
 - [Hera 5.1 on Dell XPS 7390, Non-Touch (late 2019)](elementary-OS/Dell-XPS-7390-Non-Touch-2019.md)
+- [Keyboard Layout: English US International](elementary-OS/Keyboard-Layout-English-US-International.md)
 - [Nextcloud Client](elementary-OS/Nextcloud-Client.md)
 - [Daily](elementary-OS/Daily.md)
 
