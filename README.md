@@ -8,4 +8,8 @@
 
 - [Encrypt Home Folder](Desktop/Encrypt-Home-Folder.md)
 - [ONLYOFFICE Desktop Editors](Desktop/ONLYOFFICE-Desktop-Editors.md)
+- [macOS Mojave in VMWare Workstation Player](Desktop/VMWare-macOS-Mojave.md)
+
+**Work in Progress**
+
 - [macOS Catalina in VMWare Workstation Player](Desktop/VMWare-macOS-Catalina.md)
