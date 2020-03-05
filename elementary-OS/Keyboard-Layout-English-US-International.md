@@ -14,7 +14,7 @@ These steps document how to select the English (US, international) keyboard layo
 1. Go to `System Settings > Keyboard`
 2. Click `+` in the lower left corner
 3. Select `English (US)` from the list of keyboard layouts
-4. Select `English (intl., with AltGr dead keys)`
+4. Select `English (US, alt. intl.)`
 5. Click `Add Layout`
 
 ## Explanation Video
