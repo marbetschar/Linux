@@ -164,7 +164,7 @@ apt autoclean
 EOF
 ```
 
-### Configure AppCenter repository to Container
+### Configure AppCenter repository in Container
 
 ```
 elementary@daily:~$ sudo -s -- <<EOF
@@ -174,10 +174,13 @@ apt update
 EOF
 ```
 
-### Fix permission issue
+### Fix permission issues
 
 ```
-elementary@daily:~$ sudo chown -R elementary:elementary ~/.cache
+elementary@daily:~$ sudo -s -- <<EOF
+chown elementary:elementary ~/.cache/dconf/user
+chown -R elementary:elementary ~/.cache
+EOF
 ```
 
 ### Restart LXD Container
