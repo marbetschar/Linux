@@ -5,7 +5,7 @@
 - [Nextcloud Client](elementary-OS/Nextcloud-Client.md)
 - [Daily](elementary-OS/Daily.md)
 - [Daily in LXD Container](elementary-OS/Daily-in-LXD-Container.md)
-    - [Usage of elementary OS Daily in LXD Container](Usage-of-Daily-in-LXD-Container.md)
+    - [Usage of elementary OS Daily in LXD Container](elementary-OS/Usage-of-Daily-in-LXD-Container.md)
 
 ## Desktop
 
