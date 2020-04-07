@@ -4,6 +4,7 @@
 - [Keyboard Layout: English US International](elementary-OS/Keyboard-Layout-English-US-International.md)
 - [Nextcloud Client](elementary-OS/Nextcloud-Client.md)
 - [Daily](elementary-OS/Daily.md)
+- [Daily in LXD Container](elementary-OS/Daily-in-LXD-Container.md)
 
 ## Desktop
 
