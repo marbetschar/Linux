@@ -2,10 +2,13 @@
 
 How to run elementary OS Daily from within an LXD Container for elementary OS Desktop development.
 
+## Table of Contents
+
 - [Install LXD](#install-lxd)
 - [Add support for GUI applications to LXD](#add-support-for-gui-applications-to-lxd)
 - [Setup daily container](#setup-daily-container)
 - [Usage of daily container](#usage-of-daily-container)
+- [Sources](#sources)
 
 ## Install LXD
 
