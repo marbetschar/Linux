@@ -227,6 +227,7 @@ elementary@daily:~$ io.elementary.code
 
 ## Sources
 
-- https://linux.marco.betschart.name/elementary-OS/Dell-XPS-7390-Non-Touch-2019.html
-- https://linux.marco.betschart.name/elementary-OS/Daily.html
-- https://blog.simos.info/how-to-easily-run-graphics-accelerated-gui-apps-in-lxd-containers-on-your-ubuntu-desktop/
+- [linux.marco.betschart.name/elementary-OS/Dell-XPS-7390-Non-Touch-2019.html](https://linux.marco.betschart.name/elementary-OS/Dell-XPS-7390-Non-Touch-2019.html)
+- [linux.marco.betschart.name/elementary-OS/Daily.html](https://linux.marco.betschart.name/elementary-OS/Daily.html)
+- [blog.simos.info/how-to-easily-run-graphics-accelerated-gui-apps-in-lxd-containers-on-your-ubuntu-desktop/](https://blog.simos.info/how-to-easily-run-graphics-accelerated-gui-apps-in-lxd-containers-on-your-ubuntu-desktop/)
+
