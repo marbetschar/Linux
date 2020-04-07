@@ -7,7 +7,7 @@ How to run elementary OS Daily from within an LXD Container for elementary OS De
 - [Install LXD](#install-lxd)
 - [Add support for GUI applications to LXD](#add-support-for-gui-applications-to-lxd)
 - [Setup daily container](#setup-daily-container)
-- [Usage of daily container](#usage-of-daily-container)
+- [Usage of daily container](Usage-of-Daily-in-LXD-Container.md)
 - [Sources](#sources)
 
 ## Install LXD
@@ -78,7 +78,8 @@ sudo lxc profile show gui
 
 ### Allow containers to use the :0 display
 
-Execute the following on the host to allow containers to use the `:0` display (needs to be done only once):
+We need to allow containers to use the `:0` display of the host machine. In order to do so, add
+the following custom command in **System Settings > Applications > Startup**:
 
 ```
 xhost +local:
@@ -219,17 +220,7 @@ elementary@daily:~$ sudo apt install elementary-sdk
 
 ## Usage of daily container
 
-### Jump into container
-
-```
-sudo lxc exec daily -- sudo --user elementary --login
-```
-
-### Start GUI application from container
-
-```
-elementary@daily:~$ io.elementary.code
-```
+See [this dedicated usage page](Usage-of-Daily-in-LXD-Container.md) for further information how to work with the container.
 
 ## Sources
 
