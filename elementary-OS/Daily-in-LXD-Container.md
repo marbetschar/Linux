@@ -207,6 +207,27 @@ Codename:	hera
 elementary@daily:~$ sudo io.elementary.appcenter
 ```
 
+### Auto-Update the Container
+
+To install the latest and greatest packages from elementary daily automatically, we setup the following CronJob for `root` in the `daily` container:
+
+```
+$ sudo lxc exec daily -- sudo --user elementary --login
+elementary@daily:~$ sudo crontab -e
+...
+#
+# m h  dom mon dow   command
+0 9 * * * apt update && apt upgrade -y
+```
+
+_This means the container gets updated with all the latest packages available every day at 9 AM. Feel free to adjust this however you like ([crontab.guru](https://crontab.guru/) may help creating the right expression)._
+
+To check whether the job was saved sucessfully, execute the following command:
+
+```
+elementary@daily:~$ sudo crontab -l
+```
+
 ### Install the elementary SDK
 
 At this point you setup a completely independent development environment in a LXD container. That said, you can install all needed software within the container without affecting your host machine, which probably runs elementary stable.
