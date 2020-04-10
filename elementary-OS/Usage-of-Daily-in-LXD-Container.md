@@ -44,3 +44,9 @@ You can automate this by adding it as **Custom Command to System Settings > Appl
 ```
 xhost +local:
 ```
+
+If you **keep getting the error**, try to restart the `daily` container:
+
+```
+lxc restart daily
+```
