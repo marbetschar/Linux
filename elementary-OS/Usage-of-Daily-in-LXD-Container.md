@@ -6,21 +6,9 @@ Daily LXD Container usage for elementary OS Desktop development.
 
 - [elementary OS Daily installed in an LXD Container named `daily`](Daily-in-LXD-Container.md)
 
-### List available Containers
+### Basic Management
 
-```
-lxc list
-```
-
-### Start/Stop Container
-
-```
-lxc start daily
-```
-
-```
-lxc stop daily
-```
+See the [Container Cheatsheet](../Desktop/Container-Cheatsheet.md) for commands on basic management.
 
 ### Jump into Container
 
@@ -28,7 +16,7 @@ lxc stop daily
 lxc exec daily -- sudo --login --user elementary
 ```
 
-### Start App from Container
+### Start Code from Container
 
 ```
 lxc exec daily -- sudo --login --user elementary io.elementary.code
