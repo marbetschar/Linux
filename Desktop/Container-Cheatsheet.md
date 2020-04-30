@@ -30,5 +30,5 @@ LXD is a next generation system container manager. It offers a user experience s
 
 ### More
 
-- Images for LXC: [images.linuxcontainers.org](https://uk.images.linuxcontainers.org/)
+- Images for LXD: [images.linuxcontainers.org](https://images.linuxcontainers.org/)
 - LXD REST API: [linuxcontainers.org/lxd/rest-api](https://linuxcontainers.org/lxd/rest-api/)
