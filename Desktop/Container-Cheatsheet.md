@@ -5,15 +5,15 @@ LXD is a next generation system container manager. It offers a user experience s
 ### Management
 
 | Action           | Command                                    |
-|------------------|--------------------------------------------|
+|:-----------------|:-------------------------------------------|
 | List containers  | `lxc list`                                 |
-| Create container | `lxc launch [<image-name>][Images for LXC] <container-name>` |
+| Create container | `lxc launch <image-name> <container-name>` |
 | Delete container | `lxc delete <container-name>`              |
 
 ### Daily usage
 
 | Action           | Command                                                                 |
-|------------------|-------------------------------------------------------------------------|
+|:-----------------|:------------------------------------------------------------------------|
 | Start container  | `lxc snapshot <container-name> <snapshot-name>`                         |
 | Stop container   | `lxc restore <container-name> <snapshot-name>`                          |
 | Open Terminal    | `lxc exec <container-name> -- sudo --login --user <username>`           |
@@ -22,7 +22,7 @@ LXD is a next generation system container manager. It offers a user experience s
 ### Snapshots
 
 | Action              | Command                                         |
-|---------------------|-------------------------------------------------|
+|:--------------------|:------------------------------------------------|
 | Show container info | `lxc info <container-name>`                     |
 | Create snapshot     | `lxc snapshot <container-name> <snapshot-name>` |
 | Restore snapshot    | `lxc restore <container-name> <snapshot-name>`  |
@@ -30,5 +30,5 @@ LXD is a next generation system container manager. It offers a user experience s
 
 ### More
 
-- [Images for LXC]: https://uk.images.linuxcontainers.org/
-- [LXD REST API]: https://linuxcontainers.org/lxd/rest-api/
+- Images for LXC: https://uk.images.linuxcontainers.org/
+- LXD REST API: https://linuxcontainers.org/lxd/rest-api/
