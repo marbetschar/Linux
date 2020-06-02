@@ -14,6 +14,10 @@
 - [Container Cheatsheet](Desktop/Container-Cheatsheet.md)
 - [macOS Mojave in VMWare Workstation Player](Desktop/VMWare-macOS-Mojave.md)
 
+## Server
+
+- [LXD Image Server](Server/LXD-Image-Server.md)
+
 **Work in Progress**
 
 - [macOS Catalina in VMWare Workstation Player](Desktop/VMWare-macOS-Catalina.md)
