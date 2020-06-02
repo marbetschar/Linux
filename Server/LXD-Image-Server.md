@@ -84,7 +84,7 @@ We assume you created an LXD Image using [distrobuilder](https://github.com/lxc/
 - lxd.tar.xz
 - rootfs.squashfs
 
-To successfully publish them through LXD Image Server, you need to upload them using `scp`:
+To successfully publish an image through LXD Image Server, you need to generate it using `distrobuilder` and then upload it with `scp`:
 
 ```
 #!/bin/bash

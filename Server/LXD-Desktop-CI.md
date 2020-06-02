@@ -9,7 +9,7 @@ These steps document how to install [LXD Desktop CI](https://github.com/desktop-
 - [LXD Image Server](LXD-Image-Server.md)
 - Vanilla Ubuntu 18.04 LTS
 
-## Basic Setup
+## Install CI Scripts
 
 Add a new user to execute CI commands with:
 
@@ -17,10 +17,10 @@ Add a new user to execute CI commands with:
 useradd -G sudo,lxd lxdadm
 ```
 
-Install the required dependencies:
+Install git:
 
 ```
-sudo apt install golang-go debootstrap rsync gpg squashfs-tools make git
+sudo apt install git
 ```
 
 Configure git to use your name and email address:
@@ -44,7 +44,7 @@ sudo mv lxc-ci /
 cd /lxc-ci
 ```
 
-**IMPORTANT:** In case you cloned the repository with another user than `lxdadm`, make sure to add this user to the `lxdadm` group, to avoid permission issues:
+Make sure to add your user to the `lxdadm` group, to avoid permission issues:
 
 ```
 # make sure you logout and login after
@@ -59,13 +59,32 @@ cd /lxc-ci
 git checkout desktop-lxc
 ```
 
-## Install Distrobuilder
+Configure weekly execution of the `update-image` job using `cron.weekly`:
 
 ```
-su lxdadm -
+sudo ln -s /lxc-ci/desktop-lxc/bin/update-images /etc/cron.weekly/desktop-lxc-update-images
+```
+
+## Install Distrobuilder
+
+Install the required dependencies:
+
+```
+sudo apt install golang-go debootstrap rsync gpg squashfs-tools make git
+```
+
+```
+sudo su --login lxdadm
 go get -d -v github.com/lxc/distrobuilder/distrobuilder
 cd ~/go/src/github.com/lxc/distrobuilder
 make
 exit
 ```
 
+## Test Everything
+
+Make sure everything is set up correctly by manually executing the cron job (this runs quite long):
+
+```
+sudo /etc/cron.weekly/desktop-lxc-update-images
+```
