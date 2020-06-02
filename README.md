@@ -17,6 +17,7 @@
 ## Server
 
 - [LXD Image Server](Server/LXD-Image-Server.md)
+- [LXD Desktop CI](Server/LXD-Desktop-CI.md)
 
 **Work in Progress**
 

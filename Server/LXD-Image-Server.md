@@ -90,6 +90,9 @@ To successfully publish them through LXD Image Server, you need to upload them u
 #!/bin/bash
 set -e
 
+LXD_IMAGE_SERVER_HOST=lxd.image.server.ip
+LXD_IMAGE_SERVER_USER=lxdadm
+
 LXD_IMAGE_OS=ubuntu
 LXD_IMAGE_RELEASE=focal
 LXD_IMAGE_ARCH=amd64
@@ -97,12 +100,19 @@ LXD_IMAGE_VARIANT=xfce
 LXD_IMAGE_VERSION=$(date '+%Y%m%d_%H:%m')
 LXD_IMAGE_PATH="$LXD_IMAGE_OS/$LXD_IMAGE_RELEASE/$LXD_IMAGE_ARCH/$LXD_IMAGE_VARIANT/$LXD_IMAGE_VERSION"
 
+cd /tmp
 mkdir -p "$LXD_IMAGE_PATH"
-mv lxd.tar.gz "$LXD_IMAGE_PATH"
-mv rootfs.squashfs "$LXD_IMAGE_PATH"
 
-scp -i ~/.ssh/id_rsa.pub -r "$LXD_IMAGE_PATH/lxd.tar.gz" lxdadm@lxd.image.server.ip:/var/www/simplestreams/images/
-scp -i ~/.ssh/id_rsa.pub -r "$LXD_IMAGE_PATH/rootfs.squashfs" lxdadm@lxd.image.server.ip:/var/www/simplestreams/images/
+cd "$LXD_IMAGE_PATH"
+sudo ~/go/bin/distrobuilder build-lxd /lxc-ci/images/"$LXD_IMAGE_OS".yaml \
+    -o image.release="$LXD_IMAGE_RELEASE" \
+    -o image.architecture="$LXD_IMAGE_ARCH" \
+    -o image.variant="$LXD_IMAGE_VARIANT" \
+    -o source.url="http://us.archive.ubuntu.com/ubuntu"
+cd /tmp
+
+scp -r "$LXD_IMAGE_PATH/lxd.tar.gz" $LXD_IMAGE_SERVER_USER@$LXD_IMAGE_SERVER_HOST:/var/www/simplestreams/images/
+scp -r "$LXD_IMAGE_PATH/rootfs.squashfs" $LXD_IMAGE_SERVER_USER@$LXD_IMAGE_SERVER_HOST:/var/www/simplestreams/images/
 
 rm -rf "$LXD_IMAGE_OS"
 ```
