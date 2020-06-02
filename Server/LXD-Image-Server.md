@@ -101,8 +101,8 @@ mkdir -p "$LXD_IMAGE_PATH"
 mv lxd.tar.gz "$LXD_IMAGE_PATH"
 mv rootfs.squashfs "$LXD_IMAGE_PATH"
 
-scp -i ~/.ssh/lxd-image-server.pub -r "$LXD_IMAGE_PATH/lxd.tar.gz" lxdadm@lxd.image.server.ip
-scp -i ~/.ssh/lxd-image-server.pub -r "$LXD_IMAGE_PATH/rootfs.squashfs" lxdadm@lxd.image.server.ip
+scp -i ~/.ssh/id_rsa.pub -r "$LXD_IMAGE_PATH/lxd.tar.gz" lxdadm@lxd.image.server.ip:/var/www/simplestreams/images/
+scp -i ~/.ssh/id_rsa.pub -r "$LXD_IMAGE_PATH/rootfs.squashfs" lxdadm@lxd.image.server.ip:/var/www/simplestreams/images/
 
 rm -rf "$LXD_IMAGE_OS"
 ```
