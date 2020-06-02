@@ -110,5 +110,6 @@ sudo visudo
 Make sure everything is set up correctly by manually executing the cron job (this runs quite long):
 
 ```
-sudo /etc/cron.weekly/desktop-lxc-update-images
+sudo /lxc-ci/desktop-lxc/update-image ubuntu focal amd64 xfce &
+sudo tail -f /var/log/lxc-ci/ubuntu-focal-amd64-xfce.out
 ```
