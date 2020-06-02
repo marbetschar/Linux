@@ -21,7 +21,7 @@ cd ..
 ## Installation
 
 ```
-sudo apt install ./lxd-image-server_0.0.1_all_deb
+sudo apt install ./lxd-image-server_0.0.1_all.deb
 ```
 
 ## Setup
@@ -31,46 +31,51 @@ sudo lxd-image-server init
 sudo chown -R lxdadm:www-data /var/www/simplestreams
 ```
 
-Once everythign is in place, we need to generate the SSH key for the lxdadm user to allow uploading images:
+Also make sure the lxdadm user has a password set, so we can upload new SSH keys later:
 
 ```
-sudo su --login lxdadm
-ssh-keygen
+sudo passwd lxdadm
 ```
+
+Finally make sure `openssh-server` is installed, since clients are going to use `scp` to transfer the image files to the LXD Image Server:
+
+```
+sudo apt install openssh-server
+```
+
+### Troubleshooting
+
+> This system supports the C.UTF-8 locale which is recommended. You might be able to resolve your issue by exporting the following environment variables:
+>
+>    export LC_ALL=C.UTF-8
+>    export LANG=C.UTF-8
+
+Add the file `/etc/profile.d/99-lxd-image-server-locale.sh` with the following content:
+
+```
+export LC_ALL=C.UTF-8
+export LANG=C.UTF-8
+```
+
+Logout and log back in, then try again: `sudo lxd-image-server init`.
 
 ## Upload Images to LXD Image Server
 
 ### Client Setup
 
-**On the LXD Image Server**, make sure `openssh-server` is installed, since we are going to use `scp` to transfer the image files to the LXD Image Server:
-
-```
-sudo apt install openssh-server
-sudo systemctl enable openssh-server
-sudo systemctl start openssh-server
-```
-
-Also, copy the SSH public key to a public location temporarily, so we can easily download it from the client machine:
-
-```
-sudo su --login lxdadm
-cp -p ~/.ssh/id_rsa.pub /var/www/simplestreams/id_rsa.pub
-```
-
 **On the client machine which should upload the LXD image**, make sure we can connect to the LXD Image Server via `ssh`.
-For this to work, we need to download the previously created public key:
+For this to work, we first need to create a new SSH key and upload it to our LXD Image Server:
 
 ```
-wget -O ~/.ssh/lxd-image-server.pub https://lxd.image.server.ip:8443/id_rsa.pub --no-check-certificate
+ssh-keygen
+ssh-copy-id -i ~/.ssh/id_rsa.pub lxdadm@lxd.image.server.ip
 ```
 
 And then test the connection from the client machine:
 
 ```
-ssh -i ~/.ssh/lxd-image-server.pub lxdadm@lxd.image.server.ip
+ssh -i ~/.ssh/id_rsa.pub lxdadm@lxd.image.server.ip
 ```
-
-If everything works well, **don't forget to delete the public key** on the LXD Image Server at `/var/www/simplestreams/id_rsa.pub`.
 
 ### Upload Images
 
