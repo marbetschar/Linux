@@ -14,7 +14,7 @@ These steps document how to install [LXD Desktop CI](https://github.com/desktop-
 Add a new user to execute CI commands with:
 
 ```
-useradd -G sudo,lxd lxdadm
+sudo useradd --create-home --groups sudo,lxd lxdadm
 ```
 
 Install git:
@@ -62,10 +62,27 @@ git checkout desktop-lxc
 Configure weekly execution of the `update-image` job using `cron.weekly`:
 
 ```
-sudo ln -s /lxc-ci/desktop-lxc/bin/update-images /etc/cron.weekly/desktop-lxc-update-images
+sudo ln -s /lxc-ci/desktop-lxc/update-images /etc/cron.weekly/desktop-lxc-update-images
 ```
 
-## Install Distrobuilder
+Next, configure the SSH connection to be used to upload the images:
+
+**On the client machine which should upload the LXD image**, make sure we can connect to the LXD Image Server via `ssh`.
+For this to work, we first need to create a new SSH key and upload it to our LXD Image Server:
+
+```
+sudo su --login lxdadm
+ssh-keygen
+ssh-copy-id lxdadm@lxd-image-server
+
+# test the connection from the client machine:
+ssh lxdadm@lxd-image-server
+
+# logout as lxdadm if everything is fine:
+exit
+```
+
+## Install distrobuilder
 
 Install the required dependencies:
 
@@ -79,6 +96,13 @@ go get -d -v github.com/lxc/distrobuilder/distrobuilder
 cd ~/go/src/github.com/lxc/distrobuilder
 make
 exit
+```
+
+Allow `sudo` without password for `lxdadm`:
+
+```
+sudo visudo
++ lxdadm    ALL=(ALL) NOPASSWD:ALL
 ```
 
 ## Test Everything
