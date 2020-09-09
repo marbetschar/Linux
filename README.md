@@ -10,6 +10,7 @@
 
 ## Desktop
 
+- [Calibre ePub to PDF conversion settings](Desktop/Calibre-Settings-PDF-Conversion.md)
 - [Encrypt Home Folder](Desktop/Encrypt-Home-Folder.md)
 - [ONLYOFFICE Desktop Editors](Desktop/ONLYOFFICE-Desktop-Editors.md)
 - [Container Cheatsheet](Desktop/Container-Cheatsheet.md)
