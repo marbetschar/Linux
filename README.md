@@ -1,6 +1,5 @@
 ## elementary OS 5.1 Hera
 
-- [Adobe Digital Editions](elementary-OS/Adobe-Digital-Editions.md)
 - [Hera 5.1 on Dell XPS 7390, Non-Touch (late 2019)](elementary-OS/Dell-XPS-7390-Non-Touch-2019.md)
 - [Keyboard Layout: English US International](elementary-OS/Keyboard-Layout-English-US-International.md)
 - [Nextcloud Client](elementary-OS/Nextcloud-Client.md)
@@ -10,6 +9,7 @@
 
 ## Desktop
 
+- [Adobe Digital Editions ePub Remove DRM](Desktop/CAdobe-Digital-Editions-ePub-Remove-DRM.md)
 - [Calibre ePub to PDF conversion settings](Desktop/Calibre-Settings-PDF-Conversion.md)
 - [Encrypt Home Folder](Desktop/Encrypt-Home-Folder.md)
 - [ONLYOFFICE Desktop Editors](Desktop/ONLYOFFICE-Desktop-Editors.md)
