@@ -9,7 +9,7 @@
 
 ## Desktop
 
-- [Adobe Digital Editions ePub Remove DRM](Desktop/CAdobe-Digital-Editions-ePub-Remove-DRM.md)
+- [Adobe Digital Editions ePub Remove DRM](Desktop/Adobe-Digital-Editions-ePub-Remove-DRM.md)
 - [Calibre ePub to PDF conversion settings](Desktop/Calibre-Settings-PDF-Conversion.md)
 - [Encrypt Home Folder](Desktop/Encrypt-Home-Folder.md)
 - [ONLYOFFICE Desktop Editors](Desktop/ONLYOFFICE-Desktop-Editors.md)
