@@ -93,12 +93,12 @@ wine "C:\Python27\python.exe" "C:\DeDRM\DeDRM_Plugin\adobekey.py"
 Now, all you need to remove DRM from your eBook is its path. By default Adobe Digital Editions stores the protected eBooks in `~/Documents/My Digital Editions/`. To free the eBook from DRM run the following command (**without** wine):
 
 ```
-python ~/.wine/drive_c/DeDRM/DeDRM_Plugin/ineptepub.py ~/.wine/drive_c/DeDRM/DeDRM_Plugin/adobekey_1.der ~/Documents/My\ Digital\ Editions/eBook.epub ~/Downloads/eBook.epub
+python ~/.wine/drive_c/DeDRM/DeDRM_Plugin/ineptepub.py ~/.wine/drive_c/DeDRM/DeDRM_Plugin/adobekey_1.der ~/Documents/My\ Digital\ Editions/eBook.epub ~/Downloads/eBook-DRM-Free.epub
 ```
 
 ## Further Reading
 
-- [Calibre ePub to PDF conversion settings](Desktop/Calibre-Settings-PDF-Conversion.md)
+- [Calibre ePub to PDF conversion settings](Calibre-Settings-PDF-Conversion.md)
 
 ## Troubleshooting
 
