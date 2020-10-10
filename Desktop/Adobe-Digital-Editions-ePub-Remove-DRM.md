@@ -1,6 +1,6 @@
 # Adobe Digital Editions ePub Book Remove DRM
 
-![elementary OS: 5.1 Hera](https://img.shields.io/badge/elementary%C2%A0OS-5.1%20Hera-007aff)
+![elementary OS: 6 Odin](https://img.shields.io/badge/elementary%C2%A0OS-6%20Odin-007aff)
 ![Status: Verified](https://img.shields.io/badge/status-verified-58c633)
 
 ## Table of Content
@@ -15,38 +15,32 @@
 
 In order to be able to run Adobe Digital Editions, you need wine because there is no native Linux client. To do so, make sure you install the latest available stable wine version (> 5), because Adobe Digital Editions runs much better there.
 
-#### Add needed package repositories
-
 ```
-wget -qO- https://dl.winehq.org/wine-builds/winehq.key | sudo apt-key add -
-sudo apt-add-repository 'deb https://dl.winehq.org/wine-builds/ubuntu/ bionic main'
-sudo add-apt-repository ppa:cybermax-dexter/sdl2-backport
+sudo apt install wine winetricks winbind
 ```
 
-#### Install Wine 5
+### .NET 4.0 Standalone
+
+[Download Microsoft .NET Framework 4 (Standalone Installer)](https://www.microsoft.com/en-us/download/details.aspx?id=17718) and install it using wine:
 
 ```
-sudo apt install winehq-stable winetricks winbind
+wine ~/Downloads/dotNetFx40_Full_x86_x64.exe
 ```
 
-### Windows dependencies
+### Core Fonts
 
-Next install Windows dependencies using `winetricks`:
+Next install corefonts using `winetricks`:
 
 ```
-winetricks dotnet40 corefonts
+winetricks corefonts
 ```
 
 ### Adobe Digital Editions
 
-Download Adobe Digital Editions for Windows from the official Adobe website...
-
-[https://www.adobe.com/ch_de/solutions/ebook/digital-editions/download.html](https://www.adobe.com/ch_de/solutions/ebook/digital-editions/download.html)
-
-... and install it:
+Download Adobe Digital Editions for Windows [from the official Adobe website](https://www.adobe.com/ch_de/solutions/ebook/digital-editions/download.html) and install it with wine:
 
 ```
-wine ~/Downloads/ADE_4.5_Installer.exe 
+wine ~/Downloads/ADE_4.5_Installer.exe
 ```
 
 ### PyCrypto
@@ -68,7 +62,7 @@ wine "C:\Python27\python.exe" -m pip install six
 
 ### DeDRM Tool
 
-Download the latest release of apprenticeharper's DeDRM Tool from GitHub: [github.com/apprenticeharper/DeDRM_tools/releases](https://github.com/apprenticeharper/DeDRM_tools/releases). Then unzip the files to your wine prefix:
+Download the latest release of apprenticeharper's [DeDRM Tool from GitHub](https://github.com/apprenticeharper/DeDRM_tools/releases). Then unzip the files to your wine prefix:
 
 ```
 cp -p ~/Downloads/DeDRM_tools_6.8.0.zip ~/.wine/drive_c/
@@ -101,6 +95,14 @@ python ~/.wine/drive_c/DeDRM/DeDRM_Plugin/ineptepub.py ~/.wine/drive_c/DeDRM/DeD
 - [Calibre ePub to PDF conversion settings](Calibre-Settings-PDF-Conversion.md)
 
 ## Troubleshooting
+
+### Installation of Adobe Digital Editions crashes
+
+Try to delete your wine prefix and start out with a fresh one:
+
+```
+winetricks annihilate
+```
 
 ### Adobe Digital Editions does not start
 
