@@ -7,7 +7,8 @@ How to setup Visual Studio Code with Vala autocompletion.
 
 ## Prerequisites
 
-Install [Visual Studio Code from Flathub](https://flathub.org/apps/details/com.visualstudio.code).
+- elementary OS 6 Odin (although untested, this works probably on 5.1 Hera as well)
+- Installed [Visual Studio Code from Flathub](https://flathub.org/apps/details/com.visualstudio.code).
     
 ## Setup Vala Autocompletion
 
