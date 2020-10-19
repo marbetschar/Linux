@@ -1,7 +1,7 @@
 # Visual Studio Code: Setup Vala Autocompletion
 
-![Status: WIP](https://img.shields.io/badge/status-wip-ff3130)
 ![elementary OS: 6 Odin](https://img.shields.io/badge/elementary%C2%A0OS-6%20Odin-007aff)
+![Status: Verified](https://img.shields.io/badge/status-verified-58c633)
 
 How to setup Visual Studio Code with Vala autocompletion.
 
