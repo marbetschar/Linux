@@ -49,7 +49,7 @@ As last step, make sure the "Vls: Language Server Path" is set to `$HOME/.bin/va
 
 > `aptsources.distro.NoDistroTemplateException: Error: could not find a distribution template for Elementary/next`
 
-If you encounter this error, get the required information from the the [PA's website](https://launchpad.net/~prince781/+archive/ubuntu/vala-language-server) and create the apt sources file manually ...
+If you encounter this error, get the required information from the the [PPA's website](https://launchpad.net/~prince781/+archive/ubuntu/vala-language-server) and create the apt sources file manually ...
 
 ```
 sudo vi /etc/apt/sources.list.d/vala-language-server.list
@@ -57,7 +57,7 @@ deb http://ppa.launchpad.net/prince781/vala-language-server/ubuntu focal main
 deb-src http://ppa.launchpad.net/prince781/vala-language-server/ubuntu focal main
 ```
 
-... and import the signing key manually as well. For this, you need to copy the portion of the signing key on the [PA's website](https://launchpad.net/~prince781/+archive/ubuntu/vala-language-server) after the slash - but without the help link at the end:
+... and import the signing key manually as well. For this, you need to copy the portion of the signing key on the [PPA's website](https://launchpad.net/~prince781/+archive/ubuntu/vala-language-server) after the slash - but without the help link at the end:
 
 ```
 sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys B13D6EF696260D322CC0980F3C7C9C4B21A1F479
