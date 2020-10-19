@@ -8,15 +8,15 @@ How to setup Visual Studio Code with Vala autocompletion.
 ## Prerequisites
 
 - elementary OS 6 Odin
-- Installed [Visual Studio Code from Flathub](https://flathub.org/apps/details/com.visualstudio.code).
+- Installed [VSCodium](https://flathub.org/apps/details/com.vscodium.codium) from Flathub.
     
 ## Setup Vala Autocompletion
 
 To begin with, you need to install the [Vala Plugin for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=prince781.vala):
 
 1. Visit the [plugin's website](https://marketplace.visualstudio.com/items?itemName=prince781.vala) and copy the code snippet
-2. Run Visual Studio Code
-3. From within Visual Studio Code, press `Ctrl + P` and paste the snippet
+2. Run VSCodium
+3. From within VSCodium, press `Ctrl + P` and paste the snippet
 4. Execute the snippet
 
 Now you can install the [Vala Language Server](https://github.com/benwaffle/vala-language-server). For this, open a Terminal and execute the following commands:
@@ -27,23 +27,7 @@ sudo apt update
 sudo apt install vala-language-server
 ```
 
-Then we need to make sure the Vala Language Server can be started from Flatpak, for this we create an executable in our home directory:
-
-
-```
-mkdir -p ~/.bin
-vi ~/.bin/vala-language-server.sh
-#!/bin/sh
-flatpak-spawn --host vala-language-server
-```
-
-Make sure the newly created file is executable:
-
-```
-chmod +x ~/.bin/vala-language-server.sh
-```
-
-As last step, make sure the "Vls: Language Server Path" is set to `$HOME/.bin/vala-language-server.sh` in your Visual Studio Code settings.
+As last step, make sure the "Vls: Language Server Path" is set to `flatpak-spawn --host vala-language-server` in your VSCodium settings.
 
 ## Troubleshooting
 
