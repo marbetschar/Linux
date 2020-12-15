@@ -32,11 +32,11 @@ Nevertheless, we can create the Traveler Disk manually:
 The first step is to create two Partitions on your USB Stick:
 
 - a small one called `Travel-Disk` using the `NTFS` file system and is `~ 500 MB` in size
-    - this partition won't be encrypted: It will provide the VeraCrypt binaries
+    - this partition won't be encrypted; It will provide the VeraCrypt binaries
 - a big one claiming all of the remaining space of your USB Stick
     - we are going to encrypt this partition in a minute
 
-### Transfer VeraCrypt binaries to the USB Stick
+### Copy VeraCrypt binaries
 
 Next we'll transfer the VeraCrypt binaries to the `Travel-Disk` Partition. Below we are assuming it is mounted under `/media/$USER/Travel-Disk`.
 
@@ -53,7 +53,7 @@ cp /usr/bin/veracrypt /media/$USER/Travel-Disk/Linux/
 cat > /media/$USER/Travel-Disk/Linux/README.md << 'EOF'
 # VeraCrypt for Linux
 
-You need to execute the veracrypt binary from your Terminal:
+You can execute the veracrypt binary from your Terminal:
 
 sh -c /media/$USER/Travel-Disk/Linux/veracrypt
 EOF
@@ -61,8 +61,9 @@ EOF
 
 #### macOS
 
-Unfortunately for macOS there is no standalone version available, because OSXFUSE 3.10 or newer must be installed too.
-So the best we can do is to [download the latest stable VeraCrypt DMG file](https://www.veracrypt.fr/en/Downloads.html) and copy it to `Travel-Disk` together with a brief README file:
+Unfortunately for macOS there is no standalone version available, because macFUSE 3.10 or newer must be installed too.
+So the best we can do is to [download the latest stable VeraCrypt DMG file](https://www.veracrypt.fr/en/Downloads.html) along with the [latest stable
+macFuse](https://github.com/osxfuse/osxfuse/releases) and copy both files to `Travel-Disk` together with a brief README file:
 
 ```bash
 # Create a macOS directory:
@@ -71,13 +72,15 @@ mkdir /media/$USER/Travel-Disk/macOS
 # Copy the VeraCrypt DMG file:
 cp ~/Downloads/VeraCrypt*.dmg /media/$USER/Travel-Disk/macOS/
 
+# Copy the macFuse DMG file:
+cp ~/Downloads/macfuse*.dmg /media/$USER/Travel-Disk/macOS/
+
 # Create a brief README explaining the matter:
 cat > /media/$USER/Travel-Disk/macOS/README.md << 'EOF'
 # VeraCrypt for macOS
 
-- OSXFUSE 3.10 or newer must be installed.
-
-https://www.veracrypt.fr/en/Downloads.html
+No standalone version available.
+macFUSE 3.10 or newer must be installed too.
 EOF
 ```
 
@@ -102,7 +105,7 @@ Now everything is ready to create the encrypted partition:
 3. Select `Create a Volume within a partition/drive`
 4. Select `Standard VeraCrypt volume`
 5. In **Volume Location**, click `Select Device...`
-    5.1 then select the previously created, big partition (probably /dev/sda2)
+    - then select the previously created, big partition (probably /dev/sda2)
 6. Enter the local machine's Administrator password when prompted
 7. In **Encryption Options** make sure to select [something different than the defaults](https://blog.elcomsoft.com/2020/03/breaking-veracrypt-containers/)
 8. Then set your **Volume Password**
