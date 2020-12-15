@@ -12,11 +12,11 @@
 - [Adobe Digital Editions ePub Remove DRM](Desktop/Adobe-Digital-Editions-ePub-Remove-DRM.md)
 - [Calibre ePub to PDF conversion settings](Desktop/Calibre-Settings-PDF-Conversion.md)
 - [Encrypt Home Folder](Desktop/Encrypt-Home-Folder.md)
+- [Encrypt USB Stick with Vera Crypt](Desktop/Encrypt-USB-Stick-with-Vera-Crypt.md)
 - [How to install Oracle SQL Developer on Ubuntu 20.04](Desktop/How-to-install-Oracle-SQL-Developer-on-Ubuntu-20-04.pdf)
 - [ONLYOFFICE Desktop Editors](Desktop/ONLYOFFICE-Desktop-Editors.md)
 - [Container Cheatsheet](Desktop/Container-Cheatsheet.md)
 - [macOS Mojave in VMWare Workstation Player](Desktop/VMWare-macOS-Mojave.md)
-- [Vera Crypt: Encrypt USB Stick](Desktop/Vera-Crypt-Encrypt-USB-Stick.md)
 - [Visual Studio Code: Setup Vala Autocompletion](Desktop/Visual-Studio-Code-Vala-Autocompletion.md)
 
 ## Server

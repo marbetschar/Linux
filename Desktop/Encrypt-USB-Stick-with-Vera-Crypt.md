@@ -1,4 +1,4 @@
-# Vera Crypt: Encrypt USB Stick
+# Encrypt USB Stick with Vera Crypt
 
 ![elementary OS: 6.0 Odin](https://img.shields.io/badge/elementary%C2%A0OS-6.0%20Odin-007aff)
 ![Status: WIP](https://img.shields.io/badge/status-wip-ff3130)
