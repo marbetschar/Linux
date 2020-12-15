@@ -16,6 +16,7 @@
 - [ONLYOFFICE Desktop Editors](Desktop/ONLYOFFICE-Desktop-Editors.md)
 - [Container Cheatsheet](Desktop/Container-Cheatsheet.md)
 - [macOS Mojave in VMWare Workstation Player](Desktop/VMWare-macOS-Mojave.md)
+- [Vera Crypt: Encrypt USB Stick](Desktop/Vera-Crypt-Encrypt-USB-Stick.md)
 - [Visual Studio Code: Setup Vala Autocompletion](Desktop/Visual-Studio-Code-Vala-Autocompletion.md)
 
 ## Server
