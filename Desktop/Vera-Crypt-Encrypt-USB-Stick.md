@@ -3,8 +3,8 @@
 ![elementary OS: 6.0 Odin](https://img.shields.io/badge/elementary%C2%A0OS-5.1%20Hera-007aff)
 ![Status: WIP](https://img.shields.io/badge/status-wip-ff3130)
 
-- [Installation](#Installation)
-- [Troubleshooting](#Troubleshooting)
+- [Installation](#installation)
+- [Troubleshooting](#troubleshooting)
 
 ## Installation
 
@@ -35,7 +35,7 @@ sudo apt install veracrypt
 > aptsources.distro.NoDistroTemplateException: Error: could not find a distribution template for Elementary/odin
 
 This error is due to the pre-release nature of elementary 6.0 Odin and should be fixed once the stable version is released.
-Meanwhile you can use [apply the existing workaround](https://github.com/elementary/os-patches/issues/136#issuecomment-698652540):
+Meanwhile you can [apply the existing workaround](https://github.com/elementary/os-patches/issues/136#issuecomment-698652540):
 
 _Edit `sudo vi /etc/lsb-release`:_
 
