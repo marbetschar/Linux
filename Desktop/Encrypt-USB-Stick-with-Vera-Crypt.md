@@ -113,6 +113,7 @@ Now everything is ready to create the encrypted partition:
 10. Choose `NTFS` as the **Filesystem Type**
 11. `Enable` **Cross-Platform Support**
 12. Format the Volume
+13. Click `Exit` - and you're done
 
 ## Further Reading
 
