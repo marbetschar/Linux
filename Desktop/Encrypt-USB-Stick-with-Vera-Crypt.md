@@ -4,6 +4,7 @@
 ![Status: WIP](https://img.shields.io/badge/status-wip-ff3130)
 
 - [Installation](#installation)
+- [Traveler Disk Setup](#traveler-disk-setup)
 - [Further Reading](#further-reading)
 - [Troubleshooting](#troubleshooting)
 
@@ -26,6 +27,7 @@ Nevertheless, we can create the Traveler Disk manually:
 
 > ... For linux and MAC this option is not available, but the apps are already portable. I just had to copy the executables
 > from `/usr/bin` in Linux and `Applications` in OSX. I've tested them on clean system where TrueCrypt wasn't installed.
+> **[- Ask Ubuntu: Create veracrypt traveler disk in Ubuntu](https://askubuntu.com/questions/847127/create-veracrypt-traveler-disk-in-ubuntu)**
 
 ### Partition the USB Stick
 
