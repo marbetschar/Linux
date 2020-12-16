@@ -55,7 +55,7 @@ cp /usr/bin/veracrypt /media/$USER/Travel-Disk/Linux/
 cat > /media/$USER/Travel-Disk/Linux/README.md << 'EOF'
 # VeraCrypt for Linux
 
-You can execute the veracrypt binary from your Terminal:
+Execute the veracrypt binary from your Terminal:
 
 sh -c /media/$USER/Travel-Disk/Linux/veracrypt
 EOF
@@ -77,7 +77,7 @@ cp ~/Downloads/VeraCrypt*.dmg /media/$USER/Travel-Disk/macOS/
 # Copy the macFuse DMG file:
 cp ~/Downloads/macfuse*.dmg /media/$USER/Travel-Disk/macOS/
 
-# Create a brief README explaining the matter:
+# Create a brief README:
 cat > /media/$USER/Travel-Disk/macOS/README.md << 'EOF'
 # VeraCrypt for macOS
 
@@ -96,6 +96,19 @@ mkdir /media/$USER/Travel-Disk/Windows
 
 # Copy the VeraCrypt Portable exe file:
 cp ~/Downloads/VeraCrypt*.exe /media/$USER/Travel-Disk/Windows/
+
+# Create a brief README:
+cat > /media/$USER/Travel-Disk/Windows/README.md << 'EOF'
+# VeraCrypt for Windows
+
+IMPORTANT: DON'T EXTRACT THE APP TO THE USB STICK!
+
+Because the VeraCrypt driver is not unloaded
+after exiting VeraCrypt, you won't be able to
+unmount the stick without a system reboot.
+
+https://www.veracrypt.fr/en/Portable%20Mode.html
+EOF
 ```
 
 ### Create encrypted partition
