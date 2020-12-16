@@ -33,7 +33,7 @@ Nevertheless, we can create the Traveler Disk manually:
 
 The first step is to create two Partitions on your USB Stick:
 
-- a small one called `Travel-Disk` using the `NTFS` file system and is `~ 500 MB` in size
+- a small one called `Travel-Disk` using the `NTFS` file system and is `512 MB` in size
     - this partition won't be encrypted; It will provide the VeraCrypt binaries
 - a big one claiming all of the remaining space of your USB Stick
     - we are going to encrypt this partition in a minute
